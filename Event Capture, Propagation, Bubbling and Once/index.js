@@ -1,37 +1,69 @@
 
 
+//bubbling
+// const divs = document.querySelectorAll("div");
 
-//selecting all divs
-const divs = document.querySelectorAll("div");
-
-//grabbing button
-const button = document.querySelector("button");
-
-function logText(e)
-{
-
-    // e.stopPropagation();
-    console.log(this.classList.value);
+// function logText()
+// {
+//     console.log(this.classList.value)
+// }
 
 
-    // console.log(this)
-
-}
-
-
-divs.forEach(function (div){
-    div.addEventListener("click", logText, {
-        capture: false,
-        once: true
-     })
-})
+// divs.forEach( function (div){
+//     div.addEventListener("click", logText)
+// })
 
 
-//button should work only once
-button.addEventListener("click", function(e) {
-    console.log(e) ;
-}, { 
-    once : true
-})
+
+//event capture
+// const divs = document.querySelectorAll("div");
+
+// function logText()
+// {
+//     console.log(this.classList.value)
+// }
+
+
+// divs.forEach( function (div){
+//     div.addEventListener("click", logText, {
+//         capture : false
+//     })
+// })
+
+
+
+//propagation
+// const divs = document.querySelectorAll("div");
+
+// function logText(e)
+// {
+//     e.stopPropagation();
+//     console.log(this.classList.value)
+// }
+
+
+// divs.forEach( function (div){
+//     div.addEventListener("click", logText, {
+//         capture : true
+//     })
+// })
+
+
+//once
+// const button = document.querySelector("button");
+
+// function logText(e)
+// {
+//     // e.stopPropagation();
+//     console.log(this)
+// }
+
+
+// button.addEventListener("click", logText, {
+//         once : true
+    
+// })
+
+
 
 
